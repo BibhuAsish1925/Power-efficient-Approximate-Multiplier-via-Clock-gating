@@ -8,10 +8,7 @@
 
 </div>
 
-This project presents the **design and analysis of power-efficient multiplier architectures** using **approximate computing techniques combined with clock gating**.  
-The objective is to **reduce dynamic power consumption** while maintaining acceptable computational accuracy for error-tolerant applications.
-
-The complete design is implemented using **Verilog HDL**, simulated, and analyzed for different bit-widths to study **power–accuracy trade-offs**.
+This project presents the **design and analysis of power-efficient multiplier architectures** using **approximate computing techniques combined with clock gating**. The objective is to **reduce dynamic power consumption** while maintaining acceptable computational accuracy for error-tolerant applications. The complete design is implemented using **Verilog HDL**, simulated, and analyzed for different bit-widths to study **power–accuracy trade-offs**.
 
 ---
 
