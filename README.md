@@ -1,7 +1,6 @@
 # Power-efficient-Approximate-Multiplier-via-Clock-gating
 
 ---
----
 
 ## 🔍 Project Overview
 
@@ -69,7 +68,7 @@ Multipliers are critical components in modern digital systems, including:
   - Switching activity
   - Dynamic power consumption
 
----
+</div>
 
 ### 🔹 Clock Gating
 - Prevents unnecessary clock toggling during idle cycles
@@ -82,7 +81,7 @@ Multipliers are critical components in modern digital systems, including:
 
 📷 *[Insert clock gating cell schematic here]*
 
----
+</div>
 
 ### 🔹 Adder Architectures Used
 Multiple adder architectures are implemented to evaluate **power–delay–area trade-offs**.
@@ -101,7 +100,7 @@ Multiple adder architectures are implemented to evaluate **power–delay–area 
 
 📷 *[Insert 4-bit RCA / CSA / CSLA / COSA diagrams here]*
 
----
+</div>
 
 ### 🔹 Scalable Multiplier Architecture
 - Implemented in **4-bit, 8-bit, and 16-bit configurations**
@@ -127,7 +126,7 @@ Multiple adder architectures are implemented to evaluate **power–delay–area 
 
 📷 *[Insert 16-bit multiplier diagram]*
 
----
+</div>
 
 ### 🔹 Overall Functioning (16-bit Operation)
 - When `enable = 1`:
