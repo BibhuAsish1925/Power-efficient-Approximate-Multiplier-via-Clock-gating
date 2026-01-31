@@ -2,11 +2,9 @@
 
 ---
 
-## ⚡ Power-Efficient Approximate Multiplier Using Clock Gating
-
 <div align="center">
 
-### 🔍 Project Overview
+## 🔍 Project Overview
 
 </div>
 
@@ -19,7 +17,7 @@ The complete design is implemented using **Verilog HDL**, simulated, and analyze
 
 <div align="center">
 
-### 🎯 Motivation & Problem Statement
+## 🎯 Motivation & Problem Statement
 
 </div>
 
@@ -43,7 +41,7 @@ This project explores how:
 
 <div align="center">
 
-### 🧠 Key Concepts & Techniques Used
+## 🧠 Key Concepts & Techniques Used
 
 </div>
 
@@ -75,7 +73,7 @@ This project explores how:
 
 <div align="center">
 
-### 🏗️ Architecture & Design Flow
+## 🏗️ Architecture & Design Flow
 
 </div>
 
@@ -105,7 +103,7 @@ The multiplier architecture follows a **modular and hierarchical design approach
 
 <div align="center">
 
-### ⚙️ Implementation Details
+## ⚙️ Implementation Details
 
 </div>
 
