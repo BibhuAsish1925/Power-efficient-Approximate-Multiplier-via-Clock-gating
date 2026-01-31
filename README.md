@@ -1,6 +1,7 @@
 # Power-efficient-Approximate-Multiplier-via-Clock-gating
 
 ---
+---
 
 ## 🔍 Project Overview
 
@@ -10,8 +11,6 @@ This project focuses on the **design and evaluation of power-efficient multiplie
 All designs are implemented in **Verilog HDL**, simulated, and analyzed across multiple bit-widths to study **power–accuracy trade-offs**.
 
 ---
-
-<div align="center">
 
 ## 🎯 Motivation & Problem Statement
 
@@ -34,8 +33,6 @@ Multipliers are critical components in modern digital systems, including:
 - Their combination delivers **significant power savings**
 
 ---
-
-<div align="center">
 
 ## 🧠 Key Concepts & Techniques Used
 
@@ -147,8 +144,6 @@ Multiple adder architectures are implemented to evaluate **power–delay–area 
 
 ---
 
-<div align="center">
-
 ## 🏗️ Architecture & Design Flow
 
 </div>
@@ -177,8 +172,6 @@ The design follows a **hierarchical and modular architecture**, enabling easy sc
 📷 *[Insert clock-gated multiplier block diagram here]*
 
 ---
-
-<div align="center">
 
 ## ⚙️ Implementation Details
 
@@ -216,8 +209,6 @@ The complete design is implemented in **Verilog HDL**, organized for **clarity, 
 
 ---
 
-<div align="center">
-
 ## 🧪 Simulation & Verification
 
 </div>
@@ -244,8 +235,6 @@ Functional verification ensures correctness and controlled approximation behavio
 
 ---
 
-<div align="center">
-
 ## 📊 Results & Performance Analysis
 
 </div>
@@ -262,8 +251,6 @@ The clock-gated approximate multiplier achieves **significant power reduction** 
 
 ---
 
-<div align="center">
-
 ## 🚀 Applications
 
 </div>
@@ -279,8 +266,6 @@ Suitable for systems where **energy efficiency is prioritized over exact precisi
 
 ---
 
-<div align="center">
-
 ## 🏁 Conclusion
 
 </div>
@@ -295,8 +280,6 @@ This project presents a **power-efficient 16-bit clock-gated approximate multipl
 📷 *[Insert final architecture overview here]*
 
 ---
-
-<div align="center">
 
 ## 🔮 Future Scope
 
