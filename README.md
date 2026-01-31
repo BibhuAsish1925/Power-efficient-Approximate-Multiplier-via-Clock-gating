@@ -51,7 +51,7 @@ Multipliers are critical components in modern digital systems, including:
 - Sum: `S = A + B`
 - Carry: `C = A · B`
 
-📷 *[<img width="856" height="287" alt="image" src="https://github.com/user-attachments/assets/b7bda242-744b-4673-8e38-8951da4e6b23" />]*
+<img width="856" height="287" alt="image" src="https://github.com/user-attachments/assets/b7bda242-744b-4673-8e38-8951da4e6b23" />
 
 **Exact Full Adder**
 - Sum: `S = A ⊕ B ⊕ Cin`
