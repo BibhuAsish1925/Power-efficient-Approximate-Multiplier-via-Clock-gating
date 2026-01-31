@@ -52,9 +52,10 @@ Multipliers are critical components in modern digital systems, including:
 - Carry: `C = A · B`
 
 <td align="center">
-    <img width="856" height="287" alt="image" src="https://github.com/user-attachments/assets/b7bda242-744b-4673-8e38-8951da4e6b23" /><br/>
-    <small>Circuit Diagram </small>
+  <img width="856" height="287" alt="Circuit Diagram" src="https://github.com/user-attachments/assets/b7bda242-744b-4673-8e38-8951da4e6b23"/><br/>
+  <sub><b>Figure:</b> Circuit Diagram</sub>
 </td>
+
 
 **Exact Full Adder**
 - Sum: `S = A ⊕ B ⊕ Cin`
