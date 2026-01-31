@@ -72,3 +72,69 @@ This project explores how:
 📌 *This project demonstrates how architectural-level optimizations can significantly improve power efficiency in arithmetic circuits.*
 
 ---
+
+<div align="center">
+
+### 🏗️ Architecture & Design Flow
+
+</div>
+
+The multiplier architecture follows a **modular and hierarchical design approach**, allowing easy scalability and comparison between exact and approximate implementations.
+
+**High-level design flow:**
+- Partial product generation using AND logic
+- Reduction of partial products using selected adder architectures
+- Approximation applied in lower significant stages
+- Clock gating enabled based on operand activity
+- Final summation to produce the output
+
+**Clock-gated operation:**
+- Clock is enabled only when valid multiplication is required
+- Inactive cycles prevent unnecessary switching
+- Reduces dynamic power without affecting functional correctness
+
+**Design modularity:**
+- Separate modules for adders, clock gating, and multiplier logic
+- Reusable adder blocks across different multiplier sizes
+- Clean separation between exact and approximate components
+
+📷 *[Insert block-level architecture diagram here]*  
+🔗 *Link to top-level Verilog module*
+
+---
+
+<div align="center">
+
+### ⚙️ Implementation Details
+
+</div>
+
+The complete design is written in **Verilog HDL** and organized for clarity, reuse, and scalability.
+
+**Adder modules implemented:**
+- Exact Half Adder and Full Adder
+- Approximate Half Adder
+- Approximate Full Adder
+- RCA, CSA, CSLA, and COSA variants
+
+**Multiplier configurations:**
+- 4-bit approximate multiplier
+- 8-bit approximate multiplier
+- 16-bit clock-gated approximate multiplier
+
+**Clock gating logic:**
+- Enable signal derived from input activity
+- AND-based gating to control clock propagation
+- Integrated at module-level for power optimization
+
+**Coding practices followed:**
+- Synthesizable RTL constructs
+- Parameterized modules where applicable
+- Clear signal naming and hierarchy
+- Separate testbench files for verification
+
+📷 *[Insert RTL schematic / waveform images here]*  
+🔗 *Links to individual adder and multiplier source files*
+
+---
+
