@@ -42,25 +42,135 @@ This project explores how:
 
 </div>
 
-- **Approximate Computing**
-  - Controlled inaccuracy to reduce power and hardware cost
-  - Approximation applied mainly to lower significant bits
-  - Uses approximate half adders and full adders
+### 🔹 Approximate Computing
+- Employs **controlled inaccuracy** to reduce power consumption and hardware complexity.
+- Approximation is **intentionally applied only to Lower Significant Bits (LSBs)**.
+- **Most Significant Bits (MSBs)** retain exact computation to preserve output accuracy.
+- Uses **Approximate Half Adders (AHA)** and **Approximate Full Adders (AFA)** in LSB regions.
 
-- **Clock Gating**
-  - Disables clock when computation is not required
-  - Reduces dynamic power caused by clock toggling
-  - Implemented using explicit clock gating logic
+**Exact Half Adder**
+- Sum: `S = A ⊕ B`
+- Carry: `C = A · B`
 
-- **Adder Architectures**
-  - Ripple Carry Adder (RCA)
-  - Carry Save Adder (CSA)
-  - Carry Select Adder (CSLA)
-  - Conditional Sum Adder (COSA)
+**Approximate Half Adder**
+- Sum: `S = A + B`
+- Carry: `C = A · B`
 
-- **Scalable Design Approach**
-  - Implementations for 4-bit, 8-bit, and 16-bit multipliers
-  - Parameterized modules for reusability and comparison
+<!-- Image Placeholder: Exact vs Approximate Half Adder -->
+<!-- ![Exact vs Approx HA](path/to/image.png) -->
+
+**Exact Full Adder**
+- Sum: `S = A ⊕ B ⊕ Cin`
+- Carry: `C = (A · B) + (Cin · (A ⊕ B))`
+
+**Approximate Full Adder**
+- Sum: `S = A ⊕ B ⊕ Cin`
+- Carry: `C = A · B`
+
+<!-- Image Placeholder: Exact vs Approximate Full Adder -->
+<!-- ![Exact vs Approx FA](path/to/image.png) -->
+
+- Carry logic is **simplified** in approximate adders to reduce:
+  - Gate count
+  - Switching activity
+  - Dynamic power consumption
+
+---
+
+### 🔹 Clock Gating
+- Prevents unnecessary clock toggling when computation is idle.
+- Reduces **dynamic power**, which dominates total power in synchronous designs.
+- Implemented using a **latch-based clock gating cell**.
+- Clock is enabled **only when `enable = 1`**.
+
+**Clock Gating Operation**
+- `enable = 1` → Clock propagates → Computation active  
+- `enable = 0` → Clock blocked → Output held constant  
+
+<!-- Image Placeholder: Clock Gating Cell -->
+<!-- ![Clock Gating Circuit](path/to/image.png) -->
+
+---
+
+### 🔹 Adder Architectures Used
+Different adder architectures are implemented to study **power-delay-area trade-offs**.
+
+- **Ripple Carry Adder (RCA)**
+  - Simple structure
+  - Low area
+  - Higher propagation delay
+
+<!-- Image Placeholder: 4-bit RCA -->
+<!-- ![RCA](path/to/image.png) -->
+
+- **Carry Save Adder (CSA)**
+  - Fast partial product accumulation
+  - Suitable for multipliers
+  - Reduces carry propagation delay
+
+<!-- Image Placeholder: 4-bit CSA -->
+<!-- ![CSA](path/to/image.png) -->
+
+- **Carry Select Adder (CSLA)**
+  - Precomputes sum for both carry cases
+  - Faster than RCA
+  - Increased hardware usage
+
+<!-- Image Placeholder: 4-bit CSLA -->
+<!-- ![CSLA](path/to/image.png) -->
+
+- **Conditional Sum Adder (COSA)**
+  - Parallel sum computation
+  - High speed
+  - Higher design complexity
+
+<!-- Image Placeholder: 4-bit COSA -->
+<!-- ![COSA](path/to/image.png) -->
+
+---
+
+### 🔹 Scalable Multiplier Architecture
+- Designed in **4-bit, 8-bit, and 16-bit configurations**.
+- Uses **hierarchical and modular expansion**.
+
+**4-bit Approximate Multiplier**
+- Partial products generated using AND gates.
+- AHAs and AFAs used in LSB region.
+- Exact adders used in MSB region.
+
+<!-- Image Placeholder: 4-bit Approximate Multiplier -->
+<!-- ![4-bit Multiplier](path/to/image.png) -->
+
+**8-bit Approximate Multiplier**
+- Built using **four 4-bit approximate multipliers**.
+- Partial products aligned and accumulated using an 8-bit adder.
+
+<!-- Image Placeholder: 8-bit Multiplier -->
+<!-- ![8-bit Multiplier](path/to/image.png) -->
+
+**16-bit Approximate Multiplier**
+- Constructed using **four 8-bit approximate multipliers**.
+- Outputs combined using a **16-bit adder**.
+- Approximation controlled in lower bits, accuracy preserved in MSBs.
+
+<!-- Image Placeholder: 16-bit Multiplier -->
+<!-- ![16-bit Multiplier](path/to/image.png) -->
+
+---
+
+### 🔹 Overall Functioning (Final 16-bit Operation)
+- When `enable = 1`:
+  - Gated clock activates multiplier and adder blocks.
+  - Partial products are generated.
+  - LSB computations use approximate adders.
+  - MSB computations use exact adders.
+  - Final product is registered on the gated clock edge.
+
+- When `enable = 0`:
+  - Clock is blocked.
+  - Internal switching is eliminated.
+  - Output remains stable.
+  - Dynamic power consumption is minimized.
 
 ---
 
@@ -74,27 +184,32 @@ This project explores how:
 
 </div>
 
-The multiplier architecture follows a **modular and hierarchical design approach**, allowing easy scalability and comparison between exact and approximate implementations.
+The multiplier follows a **hierarchical and modular architecture**, enabling scalability from **4-bit to 16-bit** designs.
 
-**High-level design flow:**
-- Partial product generation using AND logic
-- Reduction of partial products using selected adder architectures
-- Approximation applied in lower significant stages
-- Clock gating enabled based on operand activity
-- Final summation to produce the output
+### High-Level Design Flow
+- Partial product generation using **AND gate arrays**
+- Reduction of partial products using selected **adder architectures**
+- Approximation applied in **lower-bit stages**
+- Exact addition preserved in **higher-bit stages**
+- Final summation produces the output product
 
-**Clock-gated operation:**
-- Clock is enabled only when valid multiplication is required
-- Inactive cycles prevent unnecessary switching
-- Reduces dynamic power without affecting functional correctness
+### Hierarchical Construction
+- 4-bit approximate multiplier → basic building block
+- 8-bit multiplier → composed of four 4-bit multipliers
+- 16-bit multiplier → composed of four 8-bit multipliers
+- Modular expansion ensures design reuse and consistency
 
-**Design modularity:**
-- Separate modules for adders, clock gating, and multiplier logic
-- Reusable adder blocks across different multiplier sizes
-- Clean separation between exact and approximate components
+📷 *[Insert 4-bit / 8-bit / 16-bit multiplier architecture diagrams here]*
 
-📷 *[Insert block-level architecture diagram here]*  
-🔗 *Link to top-level Verilog module*
+---
+
+### Clock-Gated Operation
+- Enable signal controls clock propagation
+- Active computation → clock enabled
+- Idle state → clock blocked
+- Output held constant during gated cycles
+
+📷 *[Insert clock-enabled multiplier block diagram here]*
 
 ---
 
@@ -104,32 +219,36 @@ The multiplier architecture follows a **modular and hierarchical design approach
 
 </div>
 
-The complete design is written in **Verilog HDL** and organized for clarity, reuse, and scalability.
+The entire design is implemented in **Verilog HDL**, structured for **clarity, reusability, and comparison** between exact and approximate implementations.
 
-**Adder modules implemented:**
+### Adder Modules
 - Exact Half Adder and Full Adder
-- Approximate Half Adder
-- Approximate Full Adder
-- RCA, CSA, CSLA, and COSA variants
+- Approximate Half Adder and Full Adder
+- Parameterized implementations of:
+  - RCA
+  - CSA
+  - CSLA
+  - COSA
 
-**Multiplier configurations:**
+### Multiplier Variants
 - 4-bit approximate multiplier
-- 8-bit approximate multiplier
+- 8-bit approximate multiplier (hierarchical)
 - 16-bit clock-gated approximate multiplier
 
-**Clock gating logic:**
-- Enable signal derived from input activity
-- AND-based gating to control clock propagation
-- Integrated at module-level for power optimization
+### Clock Gating Integration
+- Enable-driven AND-based clock gating
+- Gating applied at **adder and register level**
+- Reduces unnecessary switching activity
 
-**Coding practices followed:**
-- Synthesizable RTL constructs
-- Parameterized modules where applicable
-- Clear signal naming and hierarchy
-- Separate testbench files for verification
+### RTL Design Practices
+- Fully synthesizable constructs
+- Parameterized and reusable modules
+- Clear module hierarchy and signal naming
+- Separate testbenches for functional verification
+- Waveform and schematic validation performed
 
-📷 *[Insert RTL schematic / waveform images here]*  
-🔗 *Links to individual adder and multiplier source files*
+📷 *[Insert RTL schematics and simulation waveforms here]*  
+🔗 *Links to relevant Verilog source files*
 
 ---
 
@@ -287,22 +406,3 @@ Functional verification was carried out using RTL-level simulation.
 📷 *[Insert waveform screenshots or simulation results here]*
 
 ---
-
-<div align="center">
-
-## ⚙️ How to Run the Project
-
-</div>
-
-Follow the steps below to simulate or synthesize the design.
-
-**Steps:**
-- Clone the repository
-- Open Xilinx Vivado
-- Create a new RTL project
-- Add all source files from the `src/` directory
-- Set the top module
-- Run behavioral simulation or synthesis
-
-```bash
-git clone https://github.com/your-username/your-repo-name.git
