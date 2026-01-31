@@ -53,8 +53,9 @@ Multipliers are critical components in modern digital systems, including:
 
 <td align="center">
   <img width="856" height="287" alt="Circuit Diagram" src="https://github.com/user-attachments/assets/b7bda242-744b-4673-8e38-8951da4e6b23"/><br/>
-  <sub><b>Figure:</b> Circuit Diagram</sub>
+  <small>Circuit Diagram</small>
 </td>
+
 
 
 **Exact Full Adder**
