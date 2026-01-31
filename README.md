@@ -8,7 +8,8 @@
 
 </div>
 
-This project presents the **design and analysis of power-efficient multiplier architectures** using **approximate computing techniques combined with clock gating**. The objective is to **reduce dynamic power consumption** while maintaining acceptable computational accuracy for error-tolerant applications. The complete design is implemented using **Verilog HDL**, simulated, and analyzed for different bit-widths to study **power–accuracy trade-offs**.
+This project focuses on the **design and evaluation of power-efficient multiplier architectures** by combining **approximate computing** with **clock gating**. The goal is to **reduce dynamic power consumption** while maintaining acceptable accuracy for **error-tolerant applications**.  
+All designs are implemented in **Verilog HDL**, simulated, and analyzed across multiple bit-widths to study **power–accuracy trade-offs**.
 
 ---
 
@@ -18,21 +19,21 @@ This project presents the **design and analysis of power-efficient multiplier ar
 
 </div>
 
-Multipliers are core components in modern digital systems such as:
+Multipliers are critical components in modern digital systems, including:
 - Digital Signal Processing (DSP)
 - Image and Video Processing
 - Machine Learning Accelerators
 - Embedded and IoT Systems
 
-Key challenges addressed:
-- Exact multipliers consume **high power and area**
-- Many real-world applications do **not require exact accuracy**
-- Unnecessary clock activity leads to **excessive dynamic power loss**
+**Challenges addressed:**
+- Exact multipliers incur **high power and area overhead**
+- Many applications **do not require exact arithmetic**
+- Unnecessary clock activity causes **excessive dynamic power loss**
 
-This project explores how:
-- **Approximate arithmetic** reduces logic complexity
-- **Clock gating** minimizes redundant switching
-- Combined techniques achieve **significant power savings**
+**This project demonstrates how:**
+- **Approximate arithmetic** reduces hardware complexity
+- **Clock gating** suppresses redundant switching
+- Their combination delivers **significant power savings**
 
 ---
 
@@ -43,10 +44,10 @@ This project explores how:
 </div>
 
 ### 🔹 Approximate Computing
-- Employs **controlled inaccuracy** to reduce power consumption and hardware complexity.
-- Approximation is **intentionally applied only to Lower Significant Bits (LSBs)**.
-- **Most Significant Bits (MSBs)** retain exact computation to preserve output accuracy.
-- Uses **Approximate Half Adders (AHA)** and **Approximate Full Adders (AFA)** in LSB regions.
+- Uses **controlled inaccuracy** to reduce power, area, and switching activity
+- Approximation applied **only to Lower Significant Bits (LSBs)**
+- **Most Significant Bits (MSBs)** computed exactly to preserve accuracy
+- Implemented using **Approximate Half Adders (AHA)** and **Approximate Full Adders (AFA)**
 
 **Exact Half Adder**
 - Sum: `S = A ⊕ B`
@@ -56,8 +57,7 @@ This project explores how:
 - Sum: `S = A + B`
 - Carry: `C = A · B`
 
-<!-- Image Placeholder: Exact vs Approximate Half Adder -->
-<!-- ![Exact vs Approx HA](path/to/image.png) -->
+📷 *[Insert Exact vs Approximate Half Adder diagram]*
 
 **Exact Full Adder**
 - Sum: `S = A ⊕ B ⊕ Cin`
@@ -67,10 +67,9 @@ This project explores how:
 - Sum: `S = A ⊕ B ⊕ Cin`
 - Carry: `C = A · B`
 
-<!-- Image Placeholder: Exact vs Approximate Full Adder -->
-<!-- ![Exact vs Approx FA](path/to/image.png) -->
+📷 *[Insert Exact vs Approximate Full Adder diagram]*
 
-- Carry logic is **simplified** in approximate adders to reduce:
+- Carry logic simplification reduces:
   - Gate count
   - Switching activity
   - Dynamic power consumption
@@ -78,103 +77,75 @@ This project explores how:
 ---
 
 ### 🔹 Clock Gating
-- Prevents unnecessary clock toggling when computation is idle.
-- Reduces **dynamic power**, which dominates total power in synchronous designs.
-- Implemented using a **latch-based clock gating cell**.
-- Clock is enabled **only when `enable = 1`**.
+- Prevents unnecessary clock toggling during idle cycles
+- Targets **dynamic power**, the dominant component in synchronous circuits
+- Implemented using a **latch-based clock gating cell**
 
-**Clock Gating Operation**
-- `enable = 1` → Clock propagates → Computation active  
+**Clock Gating Behavior**
+- `enable = 1` → Clock active → Computation enabled  
 - `enable = 0` → Clock blocked → Output held constant  
 
-<!-- Image Placeholder: Clock Gating Cell -->
-<!-- ![Clock Gating Circuit](path/to/image.png) -->
+📷 *[Insert clock gating cell schematic here]*
 
 ---
 
 ### 🔹 Adder Architectures Used
-Different adder architectures are implemented to study **power-delay-area trade-offs**.
+Multiple adder architectures are implemented to evaluate **power–delay–area trade-offs**.
 
-- **Ripple Carry Adder (RCA)**
-  - Simple structure
-  - Low area
-  - Higher propagation delay
+- **Ripple Carry Adder (RCA)**  
+  Simple structure, low area, higher delay
 
-<!-- Image Placeholder: 4-bit RCA -->
-<!-- ![RCA](path/to/image.png) -->
+- **Carry Save Adder (CSA)**  
+  Fast partial product accumulation, ideal for multipliers
 
-- **Carry Save Adder (CSA)**
-  - Fast partial product accumulation
-  - Suitable for multipliers
-  - Reduces carry propagation delay
+- **Carry Select Adder (CSLA)**  
+  Reduced carry propagation delay at the cost of extra hardware
 
-<!-- Image Placeholder: 4-bit CSA -->
-<!-- ![CSA](path/to/image.png) -->
+- **Conditional Sum Adder (COSA)**  
+  Parallel carry evaluation for high-speed operation
 
-- **Carry Select Adder (CSLA)**
-  - Precomputes sum for both carry cases
-  - Faster than RCA
-  - Increased hardware usage
-
-<!-- Image Placeholder: 4-bit CSLA -->
-<!-- ![CSLA](path/to/image.png) -->
-
-- **Conditional Sum Adder (COSA)**
-  - Parallel sum computation
-  - High speed
-  - Higher design complexity
-
-<!-- Image Placeholder: 4-bit COSA -->
-<!-- ![COSA](path/to/image.png) -->
+📷 *[Insert 4-bit RCA / CSA / CSLA / COSA diagrams here]*
 
 ---
 
 ### 🔹 Scalable Multiplier Architecture
-- Designed in **4-bit, 8-bit, and 16-bit configurations**.
-- Uses **hierarchical and modular expansion**.
+- Implemented in **4-bit, 8-bit, and 16-bit configurations**
+- Uses **hierarchical and modular design**
 
 **4-bit Approximate Multiplier**
-- Partial products generated using AND gates.
-- AHAs and AFAs used in LSB region.
-- Exact adders used in MSB region.
+- AND-based partial product generation
+- Approximate adders in LSB region
+- Exact adders in MSB region
 
-<!-- Image Placeholder: 4-bit Approximate Multiplier -->
-<!-- ![4-bit Multiplier](path/to/image.png) -->
+📷 *[Insert 4-bit approximate multiplier diagram]*
 
 **8-bit Approximate Multiplier**
-- Built using **four 4-bit approximate multipliers**.
-- Partial products aligned and accumulated using an 8-bit adder.
+- Constructed using **four 4-bit multipliers**
+- Partial products aligned and accumulated using 8-bit adders
 
-<!-- Image Placeholder: 8-bit Multiplier -->
-<!-- ![8-bit Multiplier](path/to/image.png) -->
+📷 *[Insert 8-bit multiplier diagram]*
 
 **16-bit Approximate Multiplier**
-- Constructed using **four 8-bit approximate multipliers**.
-- Outputs combined using a **16-bit adder**.
-- Approximation controlled in lower bits, accuracy preserved in MSBs.
+- Constructed using **four 8-bit multipliers**
+- Final accumulation using a 16-bit adder
+- Approximation confined to lower bits
 
-<!-- Image Placeholder: 16-bit Multiplier -->
-<!-- ![16-bit Multiplier](path/to/image.png) -->
+📷 *[Insert 16-bit multiplier diagram]*
 
 ---
 
-### 🔹 Overall Functioning (Final 16-bit Operation)
+### 🔹 Overall Functioning (16-bit Operation)
 - When `enable = 1`:
-  - Gated clock activates multiplier and adder blocks.
-  - Partial products are generated.
-  - LSB computations use approximate adders.
-  - MSB computations use exact adders.
-  - Final product is registered on the gated clock edge.
+  - Gated clock activates computation
+  - Partial products generated
+  - LSBs use approximate adders
+  - MSBs use exact adders
+  - Output registered on gated clock edge
 
 - When `enable = 0`:
-  - Clock is blocked.
-  - Internal switching is eliminated.
-  - Output remains stable.
-  - Dynamic power consumption is minimized.
-
----
-
-📌 *This project demonstrates how architectural-level optimizations can significantly improve power efficiency in arithmetic circuits.*
+  - Clock disabled
+  - Internal switching eliminated
+  - Output remains stable
 
 ---
 
@@ -184,32 +155,28 @@ Different adder architectures are implemented to study **power-delay-area trade-
 
 </div>
 
-The multiplier follows a **hierarchical and modular architecture**, enabling scalability from **4-bit to 16-bit** designs.
+The design follows a **hierarchical and modular architecture**, enabling easy scalability from **4-bit to 16-bit multipliers**.
 
 ### High-Level Design Flow
 - Partial product generation using **AND gate arrays**
-- Reduction of partial products using selected **adder architectures**
+- Partial product reduction using selected **adder architectures**
 - Approximation applied in **lower-bit stages**
-- Exact addition preserved in **higher-bit stages**
+- Exact computation preserved in **higher-bit stages**
 - Final summation produces the output product
 
 ### Hierarchical Construction
-- 4-bit approximate multiplier → basic building block
-- 8-bit multiplier → composed of four 4-bit multipliers
-- 16-bit multiplier → composed of four 8-bit multipliers
-- Modular expansion ensures design reuse and consistency
+- 4-bit multiplier → basic building block  
+- 8-bit multiplier → four 4-bit blocks  
+- 16-bit multiplier → four 8-bit blocks  
 
-📷 *[Insert 4-bit / 8-bit / 16-bit multiplier architecture diagrams here]*
-
----
+📷 *[Insert 4-bit / 8-bit / 16-bit architecture diagrams here]*
 
 ### Clock-Gated Operation
 - Enable signal controls clock propagation
-- Active computation → clock enabled
-- Idle state → clock blocked
+- Clock disabled during inactive computation
 - Output held constant during gated cycles
 
-📷 *[Insert clock-enabled multiplier block diagram here]*
+📷 *[Insert clock-gated multiplier block diagram here]*
 
 ---
 
@@ -219,7 +186,7 @@ The multiplier follows a **hierarchical and modular architecture**, enabling sca
 
 </div>
 
-The entire design is implemented in **Verilog HDL**, structured for **clarity, reusability, and comparison** between exact and approximate implementations.
+The complete design is implemented in **Verilog HDL**, organized for **clarity, reusability, and scalability**.
 
 ### Adder Modules
 - Exact Half Adder and Full Adder
@@ -232,23 +199,22 @@ The entire design is implemented in **Verilog HDL**, structured for **clarity, r
 
 ### Multiplier Variants
 - 4-bit approximate multiplier
-- 8-bit approximate multiplier (hierarchical)
+- 8-bit hierarchical approximate multiplier
 - 16-bit clock-gated approximate multiplier
 
 ### Clock Gating Integration
-- Enable-driven AND-based clock gating
-- Gating applied at **adder and register level**
-- Reduces unnecessary switching activity
+- Enable-controlled AND-based gating
+- Applied at **adder and register levels**
+- Minimizes unnecessary switching activity
 
 ### RTL Design Practices
-- Fully synthesizable constructs
+- Fully synthesizable RTL
 - Parameterized and reusable modules
-- Clear module hierarchy and signal naming
-- Separate testbenches for functional verification
-- Waveform and schematic validation performed
+- Clear hierarchy and signal naming
+- Separate testbenches for verification
 
 📷 *[Insert RTL schematics and simulation waveforms here]*  
-🔗 *Links to relevant Verilog source files*
+🔗 *[Link to Verilog source files]*
 
 ---
 
@@ -258,31 +224,25 @@ The entire design is implemented in **Verilog HDL**, structured for **clarity, r
 
 </div>
 
-Functional verification is performed to ensure correctness, stability, and controllable approximation behavior across all designs.
+Functional verification ensures correctness and controlled approximation behavior.
 
 **Verification strategy:**
-- Individual testbenches for each adder module
-- Dedicated testbench for 16-bit clock-gated approximate multiplier
-- Random and directed test vectors applied
+- Independent testbenches for adder modules
+- Dedicated testbench for 16-bit clock-gated multiplier
+- Directed and random test vectors
 - Comparison against exact multiplier outputs
 
-**Simulation checks performed:**
+**Simulation checks:**
 - Correct sum and carry generation
-- Proper activation and deactivation of clock gating
-- Output stability during gated clock cycles
-- Error confinement to lower significant bits
+- Proper clock gating enable/disable behavior
+- Output stability during gated cycles
+- Error confinement to LSB region
 
 **Tools used:**
 - Xilinx Vivado Simulator
-- RTL-level simulation and waveform analysis
+- RTL-level waveform analysis
 
-**Key observations:**
-- Clock gating successfully disables switching during idle cycles
-- Approximation does not affect MSB accuracy
-- Output error remains bounded and predictable
-
-📷 *[Insert simulation waveform screenshots here]*  
-🔗 *Link to testbench files*
+📷 *[Insert simulation waveform screenshots here]*
 
 ---
 
@@ -292,29 +252,15 @@ Functional verification is performed to ensure correctness, stability, and contr
 
 </div>
 
-The proposed clock-gated approximate multiplier demonstrates significant power savings with minimal accuracy loss.
+The clock-gated approximate multiplier achieves **significant power reduction** with minimal accuracy loss.
 
-**Power efficiency:**
 - Reduced dynamic power due to clock gating
-- Lower switching activity in approximate adder stages
-- Efficient operation during sparse input activity
+- Lower switching activity in approximate stages
+- MSB accuracy preserved
+- Predictable and bounded error behavior
 
-**Accuracy trade-off:**
-- Small error introduced in LSB computations
-- MSB region remains exact
-- Suitable for error-tolerant applications
-
-**Comparative insights:**
-- Approximate adders consume less power than exact counterparts
-- Clock-gated design outperforms non-gated designs in power
-- Balanced trade-off between power, area, and accuracy
-
-**Scalability:**
-- Architecture easily extendable to higher bit-widths
-- Modular adder selection enables design flexibility
-
-📷 *[Insert power/accuracy comparison charts here]*  
-🔗 *Link to synthesis or analysis reports*
+📷 *[Insert power and accuracy comparison charts here]*  
+🔗 *[Link to synthesis or analysis reports]*
 
 ---
 
@@ -324,22 +270,14 @@ The proposed clock-gated approximate multiplier demonstrates significant power s
 
 </div>
 
-The proposed clock-gated approximate multiplier is well-suited for applications where energy efficiency is prioritized over exact numerical precision.
+Suitable for systems where **energy efficiency is prioritized over exact precision**:
+- Image and video processing
+- Machine learning accelerators
+- DSP systems
+- Multimedia compression
+- Low-power IoT and edge devices
 
-**Target application domains:**
-- Image and video processing pipelines
-- Machine learning and neural network accelerators
-- Signal processing systems
-- Multimedia compression algorithms
-- Edge and IoT devices with strict power budgets
-
-**Why this architecture fits these applications:**
-- Error tolerance in lower significant bits is acceptable
-- Reduced power consumption extends battery life
-- Clock gating minimizes unnecessary switching activity
-- Modular adder design enables application-specific optimization
-
-📷 *[Insert application block diagram or use-case illustration here]*
+📷 *[Insert application block diagram here]*
 
 ---
 
@@ -349,20 +287,14 @@ The proposed clock-gated approximate multiplier is well-suited for applications 
 
 </div>
 
-This project presents a power-efficient 16-bit clock-gated approximate multiplier designed using multiple approximate adder architectures.
+This project presents a **power-efficient 16-bit clock-gated approximate multiplier** using multiple adder architectures.
 
-**Key outcomes:**
-- Successful integration of clock gating for dynamic power reduction
-- Effective use of approximate adders to balance accuracy and efficiency
-- Modular and scalable RTL design approach
-- Verified functional correctness through simulation
+- Clock gating effectively reduces dynamic power
+- Approximate adders balance accuracy and efficiency
+- Modular and scalable RTL design
+- Verified through functional simulation
 
-**Final remarks:**
-- The design achieves meaningful power savings with controlled error
-- Suitable for modern low-power and error-resilient computing systems
-- Provides a strong foundation for further research and ASIC implementation
-
-📷 *[Insert final architecture overview or summary figure here]*
+📷 *[Insert final architecture overview here]*
 
 ---
 
@@ -372,37 +304,12 @@ This project presents a power-efficient 16-bit clock-gated approximate multiplie
 
 </div>
 
-The current implementation opens several directions for further enhancement and research.
+- Error metric analysis (MED, MSE, error rate)
+- ASIC-level synthesis and power evaluation
+- Adaptive approximation based on workload
+- Extension to 32-bit and 64-bit designs
+- Integration into ML and DSP accelerators
 
-**Possible extensions:**
-- Integration of error analysis metrics (MED, MSE, error rate)
-- ASIC-level synthesis and power comparison using standard cell libraries
-- Dynamic adder selection based on workload characteristics
-- Extension to higher bit-width multipliers (32-bit, 64-bit)
-- Integration into neural network accelerators and DSP pipelines
-
-📷 *[Insert future roadmap diagram or enhancement flow here]*
-
----
-
-<div align="center">
-
-## 🧪 Simulation & Verification
-
-</div>
-
-Functional verification was carried out using RTL-level simulation.
-
-**Verification strategy:**
-- Directed and random test vectors
-- Comparison against exact multiplier outputs
-- Validation of clock gating enable/disable behavior
-- Observation of output correctness under different adder selections
-
-**Tools used:**
-- Xilinx Vivado Simulator
-- Behavioral and post-synthesis simulation
-
-📷 *[Insert waveform screenshots or simulation results here]*
+📷 *[Insert future enhancement roadmap here]*
 
 ---
