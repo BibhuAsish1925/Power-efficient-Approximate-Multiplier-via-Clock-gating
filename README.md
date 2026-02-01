@@ -58,6 +58,12 @@ Multipliers are critical components in modern digital systems, including:
       <small>(a). Exact HA, (b). Approx. HA</small>
     </td>
   </tr>
+  <tr>
+    <td align="center">
+      <img width="642" height="238" alt="image" src="https://github.com/user-attachments/assets/25cd2272-e606-44c7-a86b-6dba567662c3" /><br/>
+      <small>Exact vs Approximate HA truth table comparison</small>
+    </td>
+  </tr>
 </table>
 
 
