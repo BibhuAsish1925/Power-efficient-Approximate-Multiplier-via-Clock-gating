@@ -105,7 +105,7 @@ Multipliers are critical components in modern digital systems, including:
 <table>
   <tr>
     <td align="center">
-      <img width="753" height="531" alt="image" src="https://github.com/user-attachments/assets/816342d7-4a1e-45cf-b3b1-478c152ee01a" /><br/>
+      <img width="745" height="345" alt="image" src="https://github.com/user-attachments/assets/62ae6e92-8ec4-48c0-b00c-54279dfd7fac" /><br/>
       <small>Integrated clock gating circuit</small>
     </td>
   </tr>
@@ -131,21 +131,21 @@ Multiple adder architectures are implemented to evaluate **power–delay–area 
 <table>
   <tr>
     <td align="center">
-      <img width="994" height="425" alt="image" src="https://github.com/user-attachments/assets/81d43142-549f-4efb-9f9e-c73211ae572c" /><br/>
+      <img width="776" height="316" alt="image" src="https://github.com/user-attachments/assets/aa3907ae-a170-4d63-919f-99786dc01e42" /><br/>
       <small>4-Bit ripple carry adder (RCA)</small>
     </td>
     <td align="center">
-      <img width="990" height="428" alt="image" src="https://github.com/user-attachments/assets/f85c8efa-9af6-4529-861d-b140a89e109c" /><br/>
+      <img width="788" height="420" alt="image" src="https://github.com/user-attachments/assets/623c596e-f513-432c-963b-4fa329b9018f" /><br/>
       <small>4-Bit carry save adder (CSA)</small>
     </td>
   </tr>
   <tr>
     <td align="center">
-      <img width="992" height="566" alt="image" src="https://github.com/user-attachments/assets/bdb0fe89-c295-46eb-8dba-2e7125db29c9" /><br/>
+      <img width="1423" height="681" alt="image" src="https://github.com/user-attachments/assets/97621408-dc35-42f6-b04c-7df37b718154" /><br/>
       <small>4-Bit carry select adder (CSLA)</small>
     </td>
     <td align="center">
-      <img width="990" height="566" alt="image" src="https://github.com/user-attachments/assets/5eddffbd-b66e-4c99-be1a-546bfdcef6f9" /><br/>
+      <img width="1121" height="613" alt="image" src="https://github.com/user-attachments/assets/0e7e6c21-5c6d-4c42-ba79-de8eadd973f1" /><br/>
       <small>4-Bit conditional sum adder (COSA)</small>
     </td>
   </tr>
@@ -165,7 +165,7 @@ Multiple adder architectures are implemented to evaluate **power–delay–area 
 <table>
   <tr>
     <td align="center">
-      <img width="994" height="544" alt="image" src="https://github.com/user-attachments/assets/d44ecb4b-4e45-40bc-aae4-f8f5750afc34" /><br/>
+      <img width="1156" height="820" alt="image" src="https://github.com/user-attachments/assets/9c13a2cc-9374-4e60-9b76-0231b4757148" /><br/>
       <small>Architecture of 4-bit approximate multiplier</small>
     </td>
   </tr>
@@ -178,7 +178,7 @@ Multiple adder architectures are implemented to evaluate **power–delay–area 
 <table>
   <tr>
     <td align="center">
-      <img width="994" height="544" alt="image" src="https://github.com/user-attachments/assets/d44ecb4b-4e45-40bc-aae4-f8f5750afc34" /><br/>
+      <img width="1414" height="842" alt="image" src="https://github.com/user-attachments/assets/b973fd38-1663-4138-b481-7b96ef399b47" /><br/>
       <small>Architecture of 8-bit approximate multiplier using 4-bit approx. multiplier</small>
     </td>
   </tr>
@@ -216,7 +216,7 @@ Multiple adder architectures are implemented to evaluate **power–delay–area 
 <table>
   <tr>
     <td align="center">
-      <img width="994" height="530" alt="image" src="https://github.com/user-attachments/assets/36180081-f5d3-4092-8d2b-601b853e7a9b" /><br/>
+      <img width="1102" height="452" alt="image" src="https://github.com/user-attachments/assets/0311ec4b-27ee-4dc6-998f-0276ca19b56e" /><br/>
       <small>Approximate Multiplier block diagram with clock enabled Register</small>
     </td>
   </tr>
@@ -250,7 +250,7 @@ The design follows a **hierarchical and modular architecture**, enabling easy sc
 <table>
   <tr>
     <td align="center">
-      <img width="1946" height="1001" alt="image" src="https://github.com/user-attachments/assets/32c18f18-c2b4-4e1b-8bbd-1981f2ebdb49" /><br/>
+      <img width="1409" height="857" alt="image" src="https://github.com/user-attachments/assets/06243557-7c6c-4397-a815-2d79e0b782bf" /><br/>
       <small>Architecture of Clock-gated 16-bit approximate multiplier using 8-bit approx. multiplier </small>
     </td>
   </tr>
