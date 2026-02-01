@@ -1,0 +1,145 @@
+Power efficient Approximate Multiplier via Clock-gating
+
+Clock-Gated Multipliers
+├── Approximate Clock-Gated Multipliers
+│   ├── src
+│   │   ├── clock_gated_approx_mult_4bit.v
+│   │   ├── clock_gated_approx_mult_8bit.v
+│   │   └── clock_gated_approx_mult_16bit.v
+│   │
+│   ├── tb
+│   │   ├── tb_clock_gated_approx_mult_4bit.v
+│   │   ├── tb_clock_gated_approx_mult_8bit.v
+│   │   └── tb_clock_gated_approx_mult_16bit.v
+│   │
+│   └── waveforms & schematics
+│       ├── schematics
+│       │   ├── clock_gated_approx_mult_4bit.pdf
+│       │   ├── clock_gated_approx_mult_8bit.pdf
+│       │   └── clock_gated_approx_mult_16bit.pdf
+│       │
+│       └── waveforms
+│           ├── clock_gated_approx_mult_4bit.png
+│           ├── clock_gated_approx_mult_8bit.png
+│           └── clock_gated_approx_mult_16bit.png
+│
+└── Exact Clock-Gated Multipliers
+    ├── src
+    │   ├── clock_gated_exact_mult_4bit.v
+    │   ├── clock_gated_exact_mult_8bit.v
+    │   └── clock_gated_exact_mult_16bit.v
+    │
+    ├── tb
+    │   ├── tb_clock_gated_exact_mult_4bit.v
+    │   ├── tb_clock_gated_exact_mult_8bit.v
+    │   └── tb_clock_gated_exact_mult_16bit.v
+    │
+    └── waveforms & schematics
+        ├── schematics
+        │   ├── clock_gated_exact_mult_4bit.pdf
+        │   ├── clock_gated_exact_mult_8bit.pdf
+        │   └── clock_gated_exact_mult_16bit.pdf
+        │
+        └── waveforms
+            ├── clock_gated_exact_mult_4bit.png
+            ├── clock_gated_exact_mult_8bit.png
+            └── clock_gated_exact_mult_16bit.png
+
+
+Multipliers
+├── Approximate Multipliers
+│   ├── src
+│   │   ├── approx_mult_4bit.v
+│   │   ├── approx_mult_8bit.v
+│   │   └── approx_mult_16bit.v
+│   │
+│   ├── tb
+│   │   ├── tb_approx_mult_4bit.v
+│   │   ├── tb_approx_mult_8bit.v
+│   │   └── tb_approx_mult_16bit.v
+│   │
+│   └── waveforms & schematics
+│       ├── schematics
+│       │   ├── approx_mult_4bit.pdf
+│       │   ├── approx_mult_8bit.pdf
+│       │   └── approx_mult_16bit.pdf
+│       │
+│       └── waveforms
+│           ├── approx_mult_4bit.png
+│           ├── approx_mult_8bit.png
+│           └── approx_mult_16bit.png
+│
+└── Exact Multipliers
+    ├── src
+    │   ├── exact_mult_4bit.v
+    │   ├── exact_mult_8bit.v
+    │   └── exact_mult_16bit.v
+    │
+    ├── tb
+    │   ├── tb_exact_mult_4bit.v
+    │   ├── tb_exact_mult_8bit.v
+    │   └── tb_exact_mult_16bit.v
+    │
+    └── waveforms & schematics
+        ├── schematics
+        │   ├── exact_mult_4bit.pdf
+        │   ├── exact_mult_8bit.pdf
+        │   └── exact_mult_16bit.pdf
+        │
+        └── waveforms
+            ├── exact_mult_4bit.png
+            ├── exact_mult_8bit.png
+            └── exact_mult_16bit.png
+
+
+Necessary Sub-Circuits
+├── src
+│   ├── approximate_full_adder.v
+│   ├── approximate_half_adder.v
+│   ├── exact_full_adder.v
+│   ├── exact_half_adder.v
+│   ├── clock_gating_cell.v
+│   ├── gated_param_rca.v
+│   ├── param_rca.v
+│   ├── param_csa.v
+│   ├── param_csla.v
+│   ├── param_cosa.v
+│   ├── param_full_adder.v
+│   └── param_half_adder.v
+│
+├── tb
+│   ├── tb_approximate_full_adder.v
+│   ├── tb_approximate_half_adder.v
+│   ├── tb_exact_full_adder.v
+│   ├── tb_exact_half_adder.v
+│   ├── tb_clock_gating_cell.v
+│   ├── tb_gated_param_rca.v
+│   ├── tb_param_rca.v
+│   ├── tb_param_csa.v
+│   ├── tb_param_csla.v
+│   ├── tb_param_cosa.v
+│   ├── tb_param_full_adder.v
+│   └── tb_param_half_adder.v
+│
+└── waveforms & schematics
+    ├── schematics
+    │   ├── approximate_full_adder.pdf
+    │   ├── approximate_half_adder.pdf
+    │   ├── exact_full_adder.pdf
+    │   ├── exact_half_adder.pdf
+    │   ├── clock_gating_cell.pdf
+    │   ├── param_rca.pdf
+    │   ├── param_csa.pdf
+    │   ├── param_csla.pdf
+    │   └── param_cosa.pdf
+    │
+    └── waveforms
+        ├── approximate_full_adder.png
+        ├── approximate_half_adder.png
+        ├── exact_full_adder.png
+        ├── exact_half_adder.png
+        ├── clock_gating_cell.png
+        ├── param_rca.png
+        ├── param_csa.png
+        ├── param_csla.png
+        └── param_cosa.png
