@@ -81,8 +81,6 @@ Multipliers are critical components in modern digital systems, including:
       <img width="1002" height="585" alt="image" src="https://github.com/user-attachments/assets/817e38bb-f0f6-4529-9099-6ac9775cf6a5" /><br/>
       <small>(a). Exact FA, (b). Approx. FA</small>
     </td>
-  </tr>
-  <tr>
     <td align="center">
       <img width="1002" height="585" alt="image" src="https://github.com/user-attachments/assets/82a6e677-137a-45e8-9aaa-176e1fce5b70" /><br/>
       <small>Exact vs Approximate FA truth table comparison</small>
