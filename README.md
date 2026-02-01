@@ -102,7 +102,14 @@ Multipliers are critical components in modern digital systems, including:
 - `enable = 1` → Clock active → Computation enabled  
 - `enable = 0` → Clock blocked → Output held constant  
 
-📷 *[Insert clock gating cell schematic here]*
+<table>
+  <tr>
+    <td align="center">
+      <img width="753" height="531" alt="image" src="https://github.com/user-attachments/assets/816342d7-4a1e-45cf-b3b1-478c152ee01a" /><br/>
+      <small>Integrated clock gating circuit</small>
+    </td>
+  </tr>
+</table>
 
 </div>
 
@@ -121,7 +128,28 @@ Multiple adder architectures are implemented to evaluate **power–delay–area 
 - **Conditional Sum Adder (COSA)**  
   Parallel carry evaluation for high-speed operation
 
-📷 *[Insert 4-bit RCA / CSA / CSLA / COSA diagrams here]*
+<table>
+  <tr>
+    <td align="center">
+      <img width="994" height="425" alt="image" src="https://github.com/user-attachments/assets/81d43142-549f-4efb-9f9e-c73211ae572c" /><br/>
+      <small>4-Bit ripple carry adder (RCA)</small>
+    </td>
+    <td align="center">
+      <img width="990" height="428" alt="image" src="https://github.com/user-attachments/assets/f85c8efa-9af6-4529-861d-b140a89e109c" /><br/>
+      <small>4-Bit carry save adder (CSA)</small>
+    </td>
+  </tr>
+  <tr>
+    <td align="center">
+      <img width="992" height="566" alt="image" src="https://github.com/user-attachments/assets/bdb0fe89-c295-46eb-8dba-2e7125db29c9" /><br/>
+      <small>4-Bit carry select adder (CSLA)</small>
+    </td>
+    <td align="center">
+      <img width="990" height="566" alt="image" src="https://github.com/user-attachments/assets/5eddffbd-b66e-4c99-be1a-546bfdcef6f9" /><br/>
+      <small>4-Bit conditional sum adder (COSA)</small>
+    </td>
+  </tr>
+</table>
 
 </div>
 
