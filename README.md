@@ -162,20 +162,41 @@ Multiple adder architectures are implemented to evaluate **power–delay–area 
 - Approximate adders in LSB region
 - Exact adders in MSB region
 
-📷 *[Insert 4-bit approximate multiplier diagram]*
+<table>
+  <tr>
+    <td align="center">
+      <img width="994" height="544" alt="image" src="https://github.com/user-attachments/assets/d44ecb4b-4e45-40bc-aae4-f8f5750afc34" /><br/>
+      <small>Architecture of 4-bit approximate multiplier</small>
+    </td>
+  </tr>
+</table>
 
 **8-bit Approximate Multiplier**
 - Constructed using **four 4-bit multipliers**
 - Partial products aligned and accumulated using 8-bit adders
 
-📷 *[Insert 8-bit multiplier diagram]*
+<table>
+  <tr>
+    <td align="center">
+      <img width="994" height="544" alt="image" src="https://github.com/user-attachments/assets/d44ecb4b-4e45-40bc-aae4-f8f5750afc34" /><br/>
+      <small>Architecture of 8-bit approximate multiplier using 4-bit approx. multiplier</small>
+    </td>
+  </tr>
+</table>
 
 **16-bit Approximate Multiplier**
 - Constructed using **four 8-bit multipliers**
 - Final accumulation using a 16-bit adder
 - Approximation confined to lower bits
 
-📷 *[Insert 16-bit multiplier diagram]*
+<table>
+  <tr>
+    <td align="center">
+      <img width="850" height="549" alt="image" src="https://github.com/user-attachments/assets/618280d5-e213-4ddd-9843-d5a07c42fe8e" /><br/>
+      <small>Architecture of 16-bit approximate multiplier using 8-bit approx. multiplier</small>
+    </td>
+  </tr>
+</table>
 
 </div>
 
@@ -191,6 +212,15 @@ Multiple adder architectures are implemented to evaluate **power–delay–area 
   - Clock disabled
   - Internal switching eliminated
   - Output remains stable
+
+<table>
+  <tr>
+    <td align="center">
+      <img width="994" height="530" alt="image" src="https://github.com/user-attachments/assets/36180081-f5d3-4092-8d2b-601b853e7a9b" /><br/>
+      <small>Approximate Multiplier block diagram with clock enabled Register</small>
+    </td>
+  </tr>
+</table>
 
 ---
 
@@ -212,14 +242,19 @@ The design follows a **hierarchical and modular architecture**, enabling easy sc
 - 8-bit multiplier → four 4-bit blocks  
 - 16-bit multiplier → four 8-bit blocks  
 
-📷 *[Insert 4-bit / 8-bit / 16-bit architecture diagrams here]*
-
 ### Clock-Gated Operation
 - Enable signal controls clock propagation
 - Clock disabled during inactive computation
 - Output held constant during gated cycles
 
-📷 *[Insert clock-gated multiplier block diagram here]*
+<table>
+  <tr>
+    <td align="center">
+      <img width="1946" height="1001" alt="image" src="https://github.com/user-attachments/assets/32c18f18-c2b4-4e1b-8bbd-1981f2ebdb49" /><br/>
+      <small>Architecture of Clock-gated 16-bit approximate multiplier using 8-bit approx. multiplier </small>
+    </td>
+  </tr>
+</table>
 
 ---
 
