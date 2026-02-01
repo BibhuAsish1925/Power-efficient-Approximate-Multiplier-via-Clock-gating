@@ -75,7 +75,20 @@ Multipliers are critical components in modern digital systems, including:
 - Sum: `S = C'`
 - Carry: `C = A + B + Cin`
 
-📷 *[Insert Exact vs Approximate Full Adder diagram]*
+<table>
+  <tr>
+    <td align="center">
+      <img width="656" height="366" alt="image" src="https://github.com/user-attachments/assets/49f197e5-a903-4742-8652-9142fec0d751" /><br/>
+      <small>(a). Exact FA, (b). Approx. FA</small>
+    </td>
+  </tr>
+  <tr>
+    <td align="center">
+      <img width="1002" height="585" alt="image" src="https://github.com/user-attachments/assets/82a6e677-137a-45e8-9aaa-176e1fce5b70" /><br/>
+      <small>Exact vs Approximate FA truth table comparison</small>
+    </td>
+  </tr>
+</table>
 
 - Carry logic simplification reduces:
   - Gate count
