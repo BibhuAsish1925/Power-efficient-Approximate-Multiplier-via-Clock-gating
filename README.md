@@ -274,8 +274,8 @@ The complete design is implemented in **Verilog HDL**, organized for **clarity, 
   - COSA
 
 ### Multiplier Variants
-- 4-bit approximate multiplier
-- 8-bit hierarchical approximate multiplier
+- [4-bit approximate multiplier](https://github.com/BibhuAsish1925/Power-efficient-Approximate-Multiplier-via-Clock-gating/blob/main/Clock-gated%20Multipliers/Approximate/src/clock_gated_approx_mult_4bit.v)
+- [8-bit hierarchical approximate multiplier](https://github.com/BibhuAsish1925/Power-efficient-Approximate-Multiplier-via-Clock-gating/blob/main/Clock-gated%20Multipliers/Approximate/src/clock_gated_approx_mult_8bit.v)
 - [16-bit clock-gated approximate multiplier](https://github.com/BibhuAsish1925/Power-efficient-Approximate-Multiplier-via-Clock-gating/blob/main/Clock-gated%20Multipliers/Approximate/src/clock_gated_approx_mult_16bit.v)
 
 ### Clock Gating Integration
