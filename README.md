@@ -265,13 +265,13 @@ The design follows a **hierarchical and modular architecture**, enabling easy sc
 The complete design is implemented in **Verilog HDL**, organized for **clarity, reusability, and scalability**.
 
 ### Adder Modules
-- Exact Half Adder and Full Adder
-- Approximate Half Adder and Full Adder
+- [Exact Half Adder](https://github.com/BibhuAsish1925/Power-efficient-Approximate-Multiplier-via-Clock-gating/blob/main/Necessary%20Sub-Circuits/src/exact_half_adder.v) and [Exact Full Adder](https://github.com/BibhuAsish1925/Power-efficient-Approximate-Multiplier-via-Clock-gating/blob/main/Necessary%20Sub-Circuits/src/exact_full_adder.v)
+- [Approximate Half Adder](https://github.com/BibhuAsish1925/Power-efficient-Approximate-Multiplier-via-Clock-gating/blob/main/Necessary%20Sub-Circuits/src/approximate_half_adder.v) and [Approximate Full Adder](https://github.com/BibhuAsish1925/Power-efficient-Approximate-Multiplier-via-Clock-gating/blob/main/Necessary%20Sub-Circuits/src/approximate_full_adder.v)
 - Parameterized implementations of:
-  - RCA
-  - CSA
-  - CSLA
-  - COSA
+  - [RCA](https://github.com/BibhuAsish1925/Power-efficient-Approximate-Multiplier-via-Clock-gating/blob/main/Necessary%20Sub-Circuits/src/param_rca.v)
+  - [CSA](https://github.com/BibhuAsish1925/Power-efficient-Approximate-Multiplier-via-Clock-gating/blob/main/Necessary%20Sub-Circuits/src/param_csa.v)
+  - [CSLA](https://github.com/BibhuAsish1925/Power-efficient-Approximate-Multiplier-via-Clock-gating/blob/main/Necessary%20Sub-Circuits/src/param_csla.v)
+  - [COSA](https://github.com/BibhuAsish1925/Power-efficient-Approximate-Multiplier-via-Clock-gating/blob/main/Necessary%20Sub-Circuits/src/param_cosa.v)
 
 ### Multiplier Variants
 - [4-bit approximate multiplier](https://github.com/BibhuAsish1925/Power-efficient-Approximate-Multiplier-via-Clock-gating/blob/main/Multipliers/Approximate/src/approx_mult_8bit.v)
