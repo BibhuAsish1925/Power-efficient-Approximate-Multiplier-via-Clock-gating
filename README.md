@@ -264,7 +264,7 @@ The design follows a **hierarchical and modular architecture**, enabling easy sc
 
 The complete design is implemented in **Verilog HDL**, organized for **clarity, reusability, and scalability**.
 
-### Adder Modules
+### 1. Adder Modules
 - [Exact Half Adder](https://github.com/BibhuAsish1925/Power-efficient-Approximate-Multiplier-via-Clock-gating/blob/main/Necessary%20Sub-Circuits/src/exact_half_adder.v) and [Exact Full Adder](https://github.com/BibhuAsish1925/Power-efficient-Approximate-Multiplier-via-Clock-gating/blob/main/Necessary%20Sub-Circuits/src/exact_full_adder.v)
 - [Approximate Half Adder](https://github.com/BibhuAsish1925/Power-efficient-Approximate-Multiplier-via-Clock-gating/blob/main/Necessary%20Sub-Circuits/src/approximate_half_adder.v) and [Approximate Full Adder](https://github.com/BibhuAsish1925/Power-efficient-Approximate-Multiplier-via-Clock-gating/blob/main/Necessary%20Sub-Circuits/src/approximate_full_adder.v)
 - Parameterized implementations of:
@@ -273,9 +273,9 @@ The complete design is implemented in **Verilog HDL**, organized for **clarity, 
   - [CSLA](https://github.com/BibhuAsish1925/Power-efficient-Approximate-Multiplier-via-Clock-gating/blob/main/Necessary%20Sub-Circuits/src/param_csla.v)
   - [COSA](https://github.com/BibhuAsish1925/Power-efficient-Approximate-Multiplier-via-Clock-gating/blob/main/Necessary%20Sub-Circuits/src/param_cosa.v)
 
-### Multiplier Variants
+### 2. Multiplier Variants
 
-### [4-bit approximate multiplier](https://github.com/BibhuAsish1925/Power-efficient-Approximate-Multiplier-via-Clock-gating/blob/main/Multipliers/Approximate/src/approx_mult_8bit.v)
+###  2.a. [4-bit approximate multiplier](https://github.com/BibhuAsish1925/Power-efficient-Approximate-Multiplier-via-Clock-gating/blob/main/Multipliers/Approximate/src/approx_mult_8bit.v)
 
 <table>
   <tr>
@@ -286,7 +286,7 @@ The complete design is implemented in **Verilog HDL**, organized for **clarity, 
   </tr>
 </table>
 
-### [8-bit hierarchical approximate multiplier](https://github.com/BibhuAsish1925/Power-efficient-Approximate-Multiplier-via-Clock-gating/blob/main/Multipliers/Approximate/src/approx_mult_8bit.v)
+### 2.b. [8-bit hierarchical approximate multiplier](https://github.com/BibhuAsish1925/Power-efficient-Approximate-Multiplier-via-Clock-gating/blob/main/Multipliers/Approximate/src/approx_mult_8bit.v)
 
 <table>
   <tr>
@@ -296,7 +296,7 @@ The complete design is implemented in **Verilog HDL**, organized for **clarity, 
   </tr>
 </table>
      
-### [16-bit clock-gated approximate multiplier](https://github.com/BibhuAsish1925/Power-efficient-Approximate-Multiplier-via-Clock-gating/blob/main/Clock-gated%20Multipliers/Approximate/src/clock_gated_approx_mult_16bit.v)
+### 2.c. [16-bit clock-gated approximate multiplier](https://github.com/BibhuAsish1925/Power-efficient-Approximate-Multiplier-via-Clock-gating/blob/main/Clock-gated%20Multipliers/Approximate/src/clock_gated_approx_mult_16bit.v)
 
 <table>
   <tr>
@@ -307,7 +307,7 @@ The complete design is implemented in **Verilog HDL**, organized for **clarity, 
   </tr>
 </table>
 
-### [Clock Gating Integration](https://github.com/BibhuAsish1925/Power-efficient-Approximate-Multiplier-via-Clock-gating/blob/main/Necessary%20Sub-Circuits/src/clock_gating_cell.v)
+### 3. [Clock Gating Integration](https://github.com/BibhuAsish1925/Power-efficient-Approximate-Multiplier-via-Clock-gating/blob/main/Necessary%20Sub-Circuits/src/clock_gating_cell.v)
 - Enable-controlled AND-based gating
 - Applied at **adder and register levels**
 - Minimizes unnecessary switching activity
@@ -380,9 +380,9 @@ The clock-gated approximate multiplier achieves **significant power reduction** 
   </tr>
 <table>
 
-</div> 
+---
 
-- Unsigned Approximate Multiplier parameters
+1. Unsigned Approximate Multiplier parameters
 
 | Adders |  | Power (W) |  |  | Area (LUT) |  |  | Delay (ns) |  |
 |--------|-----------|----|----|------------|----|----|--------------------------|----|----|
@@ -392,9 +392,9 @@ The clock-gated approximate multiplier achieves **significant power reduction** 
 | **Ripple Carry Adder (RCA)** | 0.141 | 0.174 | 0.277 | 11 | 60 | 260 | 5.343 | 7.302 | 10.776 |
 | **Carry Save Adder (CSA)** | 0.142 | 0.178 | 0.316 | 11 | 66 | 293 | 5.343 | 7.565 | 11.670 |
 
-</div>
+---
 
-- Signed Approximate Multiplier parameters
+2. Signed Approximate Multiplier parameters
 
 | Adders |  | Power (W) |  |  | Area (LUT) |  |  | Delay (ns) |  |
 |--------|-----------|----|--------|-------------|----|--------|--------------------------|----|--------|
@@ -404,9 +404,9 @@ The clock-gated approximate multiplier achieves **significant power reduction** 
 | RCA  | 0.141 | 0.187 | 0.315 | 12 | 65 | 315 | 5.795 | 7.35  | 11.128 |
 | CSA  | 0.141 | 0.181 | 0.313 | 11 | 68 | 294 | 5.343 | 7.575 | 11.579 |
 
-</div>
+---
 
-- 16-bit Approximate Multiplier using Clock Gating and Exact Adders
+3. 16-bit Approximate Multiplier using Clock Gating and Exact Adders
 
 | Adder Type |  | Unsigned 16-bit Multiplier |  |  | Signed 16-bit Multiplier |  |
 |------------|----------------------------|----|--------|---------------------------|----|--------|
@@ -429,9 +429,6 @@ Suitable for systems where **energy efficiency is prioritized over exact precisi
 - DSP systems
 - Multimedia compression
 - Low-power IoT and edge devices
-
-📷 *[Insert power and accuracy comparison charts here]*  
-🔗 *[Link to synthesis or analysis reports]*
   
 ---
 
@@ -446,8 +443,6 @@ This project presents a **power-efficient 16-bit clock-gated approximate multipl
 - Modular and scalable RTL design
 - Verified through functional simulation
 
-📷 *[Insert final architecture overview here]*
-
 ---
 
 ## 🔮 Future Scope
@@ -459,7 +454,5 @@ This project presents a **power-efficient 16-bit clock-gated approximate multipl
 - Adaptive approximation based on workload
 - Extension to 32-bit and 64-bit designs
 - Integration into ML and DSP accelerators
-
-📷 *[Insert future enhancement roadmap here]*
 
 ---
