@@ -382,15 +382,19 @@ The clock-gated approximate multiplier achieves **significant power reduction** 
 
 </div> 
 
+- Unsigned Approximate Multiplier parameters
+
 | Adders |  | Power (W) |  |  | Area (LUT) |  |  | Delay (ns) |  |
 |--------|-----------|----|----|------------|----|----|--------------------------|----|----|
 |        | 4-Bit | 8-Bit | 16-Bit | 4-Bit | 8-Bit | 16-Bit | 4-Bit | 8-Bit | 16-Bit |
-| **Conditional Sum Adder (COSA)** | 0.141 | 0.170 | 0.237 || 11 | 67 | 305 | 5.343 | 7.894 | 10.693 |
+| **Conditional Sum Adder (COSA)** | 0.141 | 0.170 | 0.237 | 11 | 67 | 305 | 5.343 | 7.894 | 10.693 |
 | **Carry Select Adder (CSLA)** | 0.141 | 0.170 | 0.258 | 11 | 61 | 275 | 5.336 | 6.911 | 9.816 |
 | **Ripple Carry Adder (RCA)** | 0.141 | 0.174 | 0.277 | 11 | 60 | 260 | 5.343 | 7.302 | 10.776 |
 | **Carry Save Adder (CSA)** | 0.142 | 0.178 | 0.316 | 11 | 66 | 293 | 5.343 | 7.565 | 11.670 |
 
 </div>
+
+- Signed Approximate Multiplier parameters
 
 | Adders |  | Power (W) |  |  | Area (LUT) |  |  | Delay (ns) |  |
 |--------|-----------|----|--------|-------------|----|--------|--------------------------|----|--------|
@@ -401,6 +405,8 @@ The clock-gated approximate multiplier achieves **significant power reduction** 
 | CSA  | 0.141 | 0.181 | 0.313 | 11 | 68 | 294 | 5.343 | 7.575 | 11.579 |
 
 </div>
+
+- 16-bit Approximate Multiplier using Clock Gating and Exact Adders
 
 | Adder Type |  | Unsigned 16-bit Multiplier |  |  | Signed 16-bit Multiplier |  |
 |------------|----------------------------|----|--------|---------------------------|----|--------|
