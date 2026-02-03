@@ -359,19 +359,21 @@ The clock-gated approximate multiplier achieves **significant power reduction** 
 <table>
   <tr>
     <td align="center">
-      <img width="1031" height="349" alt="image" src="https://github.com/user-attachments/assets/d967d503-16f7-4391-a385-9aa23947eea3" /><br/>
+      <img width="732" height="205" alt="image" src="https://github.com/user-attachments/assets/541c7534-5bf6-492f-b9dc-528633851488" /><br/>
       <small>Approximate multipliers Power characteristics comparison</small>
     </td>
   </tr>
+  </div>
   </tr>
     <td align="center">
-      <img width="1031" height="340" alt="image" src="https://github.com/user-attachments/assets/6cdb1127-c143-4d86-b434-e9f52cedbded" /><br/>
+      <img width="721" height="201" alt="image" src="https://github.com/user-attachments/assets/7c44c1e0-b32e-4ba7-95c5-b14da8cbe8fc" /><br/>
       <small>Approximate multipliers Area characteristics comparison</small>
     </td>
   </tr>
+  </div>
   </tr>
     <td align="center">
-      <img width="1031" height="340" alt="image" src="https://github.com/user-attachments/assets/23ce62f2-a1ae-4287-8e72-0dc46b336a67" /><br/>
+      <img width="722" height="214" alt="image" src="https://github.com/user-attachments/assets/8d7d9f9e-bb1c-4b8a-9904-084d1ee1711e" /><br/>
       <small>Approximate multipliers Delay characteristics comparison</small>
     </td>
   </tr>
@@ -382,19 +384,21 @@ The clock-gated approximate multiplier achieves **significant power reduction** 
 <table>
   <tr>
     <td align="center">
-      <img width="1024" height="349" alt="image" src="https://github.com/user-attachments/assets/ddbe7f8d-4463-4f8c-9617-f07b2de3005f" /><br/>
+      <img width="948" height="215" alt="image" src="https://github.com/user-attachments/assets/5900149c-f82f-4be9-b687-56c142e91cab" /><br/>
       <small>Unsigned Approximate Multiplier parameters</small>
     </td>
   </tr>
+  </div>
   </tr>
     <td align="center">
-      <img width="1024" height="324" alt="image" src="https://github.com/user-attachments/assets/4e4410a1-4253-47ad-87ac-57e299a9aec0" /><br/>
+      <img width="856" height="189" alt="image" src="https://github.com/user-attachments/assets/18dfc9ff-61ea-43bf-a7c6-694a7843ddeb" /><br/>
       <small>Signed Approximate Multiplier parameters</small>
     </td>
   </tr>
+  </div>
   </tr>
     <td align="center">
-      <img width="1024" height="340" alt="image" src="https://github.com/user-attachments/assets/95c8c72c-caa4-4a63-828f-81321d3d9aff" /><br/>
+      <img width="852" height="198" alt="image" src="https://github.com/user-attachments/assets/76467f04-6c22-41e4-8ebc-8e67afa8645e" /><br/>
       <small>16-bit Approx. Multiplier using Clock Gating and Exact Adders</small>
     </td>
   </tr>
