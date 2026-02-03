@@ -2,7 +2,7 @@
 
 ---
 
-| Adders | | Power (W) | | | Area (LUT) | | | Critical Path Delay (ns) | |
+| Adders |   | Power (W) |   |   | Area (LUT) |   |   | Critical Path Delay (ns) |   |
 |        | 4-Bit | 8-Bit | 16-Bit | 4-Bit | 8-Bit | 16-Bit | 4-Bit | 8-Bit | 16-Bit |
 |--------|-----------|----|----|------------|----|----|--------------------------|----|----|
 | **Conditional Sum Adder (COSA)** | 0.141 | 0.170 | 0.237 | 11 | 67 | 305 | 5.343 | 7.894 | 10.693 |
