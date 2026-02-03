@@ -274,7 +274,8 @@ The complete design is implemented in **Verilog HDL**, organized for **clarity, 
   - [COSA](https://github.com/BibhuAsish1925/Power-efficient-Approximate-Multiplier-via-Clock-gating/blob/main/Necessary%20Sub-Circuits/src/param_cosa.v)
 
 ### Multiplier Variants
-- [4-bit approximate multiplier](https://github.com/BibhuAsish1925/Power-efficient-Approximate-Multiplier-via-Clock-gating/blob/main/Multipliers/Approximate/src/approx_mult_8bit.v)
+
+### [4-bit approximate multiplier](https://github.com/BibhuAsish1925/Power-efficient-Approximate-Multiplier-via-Clock-gating/blob/main/Multipliers/Approximate/src/approx_mult_8bit.v)
 
 <table>
   <tr>
@@ -285,7 +286,7 @@ The complete design is implemented in **Verilog HDL**, organized for **clarity, 
   </tr>
 </table>
 
-- [8-bit hierarchical approximate multiplier](https://github.com/BibhuAsish1925/Power-efficient-Approximate-Multiplier-via-Clock-gating/blob/main/Multipliers/Approximate/src/approx_mult_8bit.v)
+### [8-bit hierarchical approximate multiplier](https://github.com/BibhuAsish1925/Power-efficient-Approximate-Multiplier-via-Clock-gating/blob/main/Multipliers/Approximate/src/approx_mult_8bit.v)
 
 <table>
   <tr>
@@ -295,7 +296,7 @@ The complete design is implemented in **Verilog HDL**, organized for **clarity, 
   </tr>
 </table>
      
-- [16-bit clock-gated approximate multiplier](https://github.com/BibhuAsish1925/Power-efficient-Approximate-Multiplier-via-Clock-gating/blob/main/Clock-gated%20Multipliers/Approximate/src/clock_gated_approx_mult_16bit.v)
+### [16-bit clock-gated approximate multiplier](https://github.com/BibhuAsish1925/Power-efficient-Approximate-Multiplier-via-Clock-gating/blob/main/Clock-gated%20Multipliers/Approximate/src/clock_gated_approx_mult_16bit.v)
 
 <table>
   <tr>
@@ -384,7 +385,6 @@ The clock-gated approximate multiplier achieves **significant power reduction** 
 | Adders |  | Power (W) |  |  | Area (LUT) |  |  | Delay (ns) |  |
 |--------|-----------|----|----|------------|----|----|--------------------------|----|----|
 |        | 4-Bit | 8-Bit | 16-Bit | 4-Bit | 8-Bit | 16-Bit | 4-Bit | 8-Bit | 16-Bit |
-|--------|-----------|----|----|------------|----|----|--------------------------|----|----|
 | **Conditional Sum Adder (COSA)** | 0.141 | 0.170 | 0.237 || 11 | 67 | 305 | 5.343 | 7.894 | 10.693 |
 | **Carry Select Adder (CSLA)** | 0.141 | 0.170 | 0.258 | 11 | 61 | 275 | 5.336 | 6.911 | 9.816 |
 | **Ripple Carry Adder (RCA)** | 0.141 | 0.174 | 0.277 | 11 | 60 | 260 | 5.343 | 7.302 | 10.776 |
@@ -395,35 +395,20 @@ The clock-gated approximate multiplier achieves **significant power reduction** 
 | Adders |  | Power (W) |  |  | Area (LUT) |  |  | Delay (ns) |  |
 |--------|-----------|----|--------|-------------|----|--------|--------------------------|----|--------|
 |        | 4-Bit | 8-Bit | 16-Bit | 4-Bit | 8-Bit | 16-Bit | 4-Bit | 8-Bit | 16-Bit |
-|--------|-----------|----|--------|-------------|----|--------|--------------------------|----|--------|
 | COSA | 0.141 | 0.182 | 0.270 | 10 | 71 | 321 | 5.343 | 7.792 | 11.39 |
 | CSLA | 0.141 | 0.186 | 0.289 | 10 | 74 | 310 | 5.343 | 7.588 | 10.453 |
 | RCA  | 0.141 | 0.187 | 0.315 | 12 | 65 | 315 | 5.795 | 7.35  | 11.128 |
 | CSA  | 0.141 | 0.181 | 0.313 | 11 | 68 | 294 | 5.343 | 7.575 | 11.579 |
 
+</div>
 
-<table>
-  <tr>
-    <td align="center">
-      <img width="948" height="215" alt="image" src="https://github.com/user-attachments/assets/5900149c-f82f-4be9-b687-56c142e91cab" /><br/>
-      <small>Unsigned Approximate Multiplier parameters</small>
-    </td>
-  </tr>
-  </div>
-  </tr>
-    <td align="center">
-      <img width="856" height="189" alt="image" src="https://github.com/user-attachments/assets/18dfc9ff-61ea-43bf-a7c6-694a7843ddeb" /><br/>
-      <small>Signed Approximate Multiplier parameters</small>
-    </td>
-  </tr>
-  </div>
-  </tr>
-    <td align="center">
-      <img width="852" height="198" alt="image" src="https://github.com/user-attachments/assets/76467f04-6c22-41e4-8ebc-8e67afa8645e" /><br/>
-      <small>16-bit Approx. Multiplier using Clock Gating and Exact Adders</small>
-    </td>
-  </tr>
-<table>
+| Adder Type |  | Unsigned 16-bit Multiplier |  |  | Signed 16-bit Multiplier |  |
+|------------|----------------------------|----|--------|---------------------------|----|--------|
+|            | Power (W) | Area (LUT) | Delay (ns) | Power (W) | Area (LUT) | Delay (ns) |
+| COSA | 0.237 | 305 | 10.693 | 0.271 | 321 | 11.390 |
+| CSLA | 0.258 | 275 | 9.816  | 0.289 | 310 | 10.453 |
+| RCA  | 0.277 | 260 | 10.776 | 0.315 | 315 | 11.128 |
+| CSA  | 0.277 | 260 | 10.773 | 0.303 | 287 | 11.307 |
 
 
 ---
