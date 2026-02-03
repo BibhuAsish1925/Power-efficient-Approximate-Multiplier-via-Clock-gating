@@ -372,8 +372,27 @@ Suitable for systems where **energy efficiency is prioritized over exact precisi
 - Multimedia compression
 - Low-power IoT and edge devices
 
-📷 *[Insert application block diagram here]*
-
+<table>
+  <tr>
+    <td align="center">
+      <img width="1024" height="349" alt="image" src="https://github.com/user-attachments/assets/ddbe7f8d-4463-4f8c-9617-f07b2de3005f" /><br/>
+      <small>Unsigned Approximate Multiplier parameters</small>
+    </td>
+  </tr>
+  </tr>
+    <td align="center">
+      <img width="1024" height="324" alt="image" src="https://github.com/user-attachments/assets/4e4410a1-4253-47ad-87ac-57e299a9aec0" /><br/>
+      <small>Signed Approximate Multiplier parameters</small>
+    </td>
+  </tr>
+  </tr>
+    <td align="center">
+      <img width="1024" height="340" alt="image" src="https://github.com/user-attachments/assets/95c8c72c-caa4-4a63-828f-81321d3d9aff" /><br/>
+      <small>16-bit Approx. Multiplier using Clock Gating and Exact Adders</small>
+    </td>
+  </tr>
+<table>
+  
 ---
 
 ## 🏁 Conclusion
