@@ -382,7 +382,7 @@ The clock-gated approximate multiplier achieves **significant power reduction** 
 
 ---
 
-1. Unsigned Approximate Multiplier parameters
+### 1. Unsigned Approximate Multiplier parameters
 
 | Adders |  | Power (W) |  |  | Area (LUT) |  |  | Delay (ns) |  |
 |--------|-----------|----|----|------------|----|----|--------------------------|----|----|
@@ -394,7 +394,7 @@ The clock-gated approximate multiplier achieves **significant power reduction** 
 
 ---
 
-2. Signed Approximate Multiplier parameters
+### 2. Signed Approximate Multiplier parameters
 
 | Adders |  | Power (W) |  |  | Area (LUT) |  |  | Delay (ns) |  |
 |--------|-----------|----|--------|-------------|----|--------|--------------------------|----|--------|
@@ -406,15 +406,15 @@ The clock-gated approximate multiplier achieves **significant power reduction** 
 
 ---
 
-3. 16-bit Approximate Multiplier using Clock Gating and Exact Adders
+### 3. 16-bit Approximate Multiplier using Clock Gating and Exact Adders
 
 | Adder Type |  | Unsigned 16-bit Multiplier |  |  | Signed 16-bit Multiplier |  |
 |------------|----------------------------|----|--------|---------------------------|----|--------|
 |            | Power (W) | Area (LUT) | Delay (ns) | Power (W) | Area (LUT) | Delay (ns) |
-| COSA | 0.237 | 305 | 10.693 | 0.271 | 321 | 11.390 |
-| CSLA | 0.258 | 275 | 9.816  | 0.289 | 310 | 10.453 |
-| RCA  | 0.277 | 260 | 10.776 | 0.315 | 315 | 11.128 |
-| CSA  | 0.277 | 260 | 10.773 | 0.303 | 287 | 11.307 |
+| COSA | **0.237** | 305 | 10.693 | **0.271** | 321 | 11.390 |
+| CSLA | 0.258 | 275 | **9.816**  | 0.289 | 310 | **10.453** |
+| RCA  | 0.277 | **260** | 10.776 | 0.315 | 315 | 11.128 |
+| CSA  | 0.277 | **260** | 10.773 | 0.303 | **287** | 11.307 |
 
 
 ---
