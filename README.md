@@ -356,21 +356,28 @@ The clock-gated approximate multiplier achieves **significant power reduction** 
 - MSB accuracy preserved
 - Predictable and bounded error behavior
 
-📷 *[Insert power and accuracy comparison charts here]*  
-🔗 *[Link to synthesis or analysis reports]*
+<table>
+  <tr>
+    <td align="center">
+      <img width="1031" height="349" alt="image" src="https://github.com/user-attachments/assets/d967d503-16f7-4391-a385-9aa23947eea3" /><br/>
+      <small>Approximate multipliers Power characteristics comparison</small>
+    </td>
+  </tr>
+  </tr>
+    <td align="center">
+      <img width="1031" height="340" alt="image" src="https://github.com/user-attachments/assets/6cdb1127-c143-4d86-b434-e9f52cedbded" /><br/>
+      <small>Approximate multipliers Area characteristics comparison</small>
+    </td>
+  </tr>
+  </tr>
+    <td align="center">
+      <img width="1031" height="340" alt="image" src="https://github.com/user-attachments/assets/23ce62f2-a1ae-4287-8e72-0dc46b336a67" /><br/>
+      <small>Approximate multipliers Delay characteristics comparison</small>
+    </td>
+  </tr>
+<table>
 
----
-
-## 🚀 Applications
-
-</div>
-
-Suitable for systems where **energy efficiency is prioritized over exact precision**:
-- Image and video processing
-- Machine learning accelerators
-- DSP systems
-- Multimedia compression
-- Low-power IoT and edge devices
+</div> 
 
 <table>
   <tr>
@@ -392,6 +399,23 @@ Suitable for systems where **energy efficiency is prioritized over exact precisi
     </td>
   </tr>
 <table>
+
+
+---
+
+## 🚀 Applications
+
+</div>
+
+Suitable for systems where **energy efficiency is prioritized over exact precision**:
+- Image and video processing
+- Machine learning accelerators
+- DSP systems
+- Multimedia compression
+- Low-power IoT and edge devices
+
+📷 *[Insert power and accuracy comparison charts here]*  
+🔗 *[Link to synthesis or analysis reports]*
   
 ---
 
