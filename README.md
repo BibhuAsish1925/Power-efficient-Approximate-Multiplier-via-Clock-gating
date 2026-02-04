@@ -342,36 +342,6 @@ Functional verification ensures correctness and controlled approximation behavio
 - Xilinx Vivado Simulator
 - RTL-level waveform analysis
 
-<table>
-  <tr>
-    <td align="center">
-      <img width="1550" height="212" alt="clock_gating_cell" src="https://github.com/user-attachments/assets/56c825b4-d8c9-4cd1-88cf-0888a1d68f13" /><br/>
-      <small>clock_gating_cell</small>
-    </td>
-    <td align="center">
-      <img width="1552" height="246" alt="exact_full_adder" src="https://github.com/user-attachments/assets/2947ec7d-ab2d-476c-a762-add6cb970a6d" /><br/>
-      <small>exact_full_adder</small>
-    </td>
-    <td align="center">
-      <img width="1548" height="243" alt="approximate_full_adder" src="https://github.com/user-attachments/assets/01c85970-2cab-4646-a452-bc36f70705f4" /><br/>
-      <small>approximate_full_adder</small>
-    </td>
-  </tr>
-  <tr>
-    <td align="center">
-      <img width="1553" height="270" alt="approx_mult_4bit" src="https://github.com/user-attachments/assets/7ab14086-d2c8-478f-9b8d-8d3cfa2692fe" /><br/>
-      <small>approx_mult_4bit</small>
-    </td>
-    <td align="center">
-      <img width="1550" height="182" alt="approx_mult_8bit" src="https://github.com/user-attachments/assets/96d0a03d-59d0-450f-91fb-2d35fc6c8e74" /><br/>
-      <small>approx_mult_8bit</small>
-    </td>
-    <td align="center">
-      <img width="1552" height="182" alt="approx_mult_16bit" src="https://github.com/user-attachments/assets/f1cde734-9aba-4c66-8a82-460da82d3a44" /><br/>
-      <small>approx_mult_16bit</small>
-    </td>
-  </tr>
-
 ---
 
 ## 📊 Results & Performance Analysis
