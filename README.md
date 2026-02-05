@@ -289,7 +289,7 @@ The complete design is implemented in **Verilog HDL**, organized for **clarity, 
       <small>Approximate Half Adder</small>
     </td>
     <td align="center">
-      <img width="848" height="316" alt="image" src="https://github.com/user-attachments/assets/98f3487d-366d-47cc-97c2-795c903570b4" /><br/>
+      <img width="1236" height="353" alt="image" src="https://github.com/user-attachments/assets/0a5be5c5-8840-4caf-9249-a3803ef95cc9" /><br/>
       <small>Approximate Full Adder</small>
     </td>
   </tr>
