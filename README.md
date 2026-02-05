@@ -300,32 +300,37 @@ The complete design is implemented in **Verilog HDL**, organized for **clarity, 
   - [CSA](https://github.com/BibhuAsish1925/Power-efficient-Approximate-Multiplier-via-Clock-gating/blob/main/Necessary%20Sub-Circuits/src/param_csa.v)
   - [CSLA](https://github.com/BibhuAsish1925/Power-efficient-Approximate-Multiplier-via-Clock-gating/blob/main/Necessary%20Sub-Circuits/src/param_csla.v)
   - [COSA](https://github.com/BibhuAsish1925/Power-efficient-Approximate-Multiplier-via-Clock-gating/blob/main/Necessary%20Sub-Circuits/src/param_cosa.v)
- 
+
+
 <table>
   <tr>
     <td align="center">
       <img width="905" height="603" alt="image" src="https://github.com/user-attachments/assets/31971c81-ac25-4a7d-a9ef-486858371c72" /><br/>
       <small>4-Bit ripple carry adder (RCA)</small>
     </td>
+  </tr>
+  </div>
+  </tr>
     <td align="center">
       <img width="622" height="788" alt="image" src="https://github.com/user-attachments/assets/8ffa4bce-ad15-43cf-9378-06fcd629ddaa" /><br/>
       <small>4-Bit carry save adder (CSA)</small>
     </td>
   </tr>
-</table>
-
-</table>
-  <tr>
+  </div>
+  </tr>
     <td align="center">
       <img width="1680" height="853" alt="image" src="https://github.com/user-attachments/assets/a4750b9c-e239-4fe1-a065-741bec5d56e8" /><br/>
       <small>4-Bit carry select adder (CSLA)</small>
     </td>
+  </tr>
+  </div>
+  </tr>
     <td align="center">
       <img width="1421" height="849" alt="image" src="https://github.com/user-attachments/assets/f7708f36-df06-4498-8c7c-0960352ad0f2" /><br/>
       <small>4-Bit conditional sum adder (COSA)</small>
     </td>
   </tr>
-</table>
+<table>
 
 
 ### 2. Multiplier Variants
