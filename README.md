@@ -67,11 +67,11 @@ Multipliers are critical components in modern digital systems, including:
 
 **Exact Full Adder**
 - Sum: `S = A ⊕ B ⊕ Cin`
-- Carry: `C = (A · B) + (Cin · (A ⊕ B))`
+- Carry: `Cout = (A · B) + (Cin · (A ⊕ B))`
 
 **Approximate Full Adder**
-- Sum: `S = C'`
-- Carry: `C = A + B + Cin`
+- Sum: `S = Cout'`
+- Carry: `Cout = (A · B) + (B · Cin) + (Cin · A)`
 
 <table>
   <tr>
@@ -266,12 +266,67 @@ The complete design is implemented in **Verilog HDL**, organized for **clarity, 
 
 ### 1. Adder Modules
 - [Exact Half Adder](https://github.com/BibhuAsish1925/Power-efficient-Approximate-Multiplier-via-Clock-gating/blob/main/Necessary%20Sub-Circuits/src/exact_half_adder.v) and [Exact Full Adder](https://github.com/BibhuAsish1925/Power-efficient-Approximate-Multiplier-via-Clock-gating/blob/main/Necessary%20Sub-Circuits/src/exact_full_adder.v)
+
+<table>
+  <tr>
+    <td align="center">
+      <img width="820" height="366" alt="image" src="https://github.com/user-attachments/assets/8e073e81-c3df-4dab-bb6f-dc1f94e13740" /><br/>
+      <small>Exact Half Adder</small>
+    </td>
+    <td align="center">
+      <img width="882" height="332" alt="image" src="https://github.com/user-attachments/assets/e101d592-86b1-440a-b3b7-5ad68ddbd1e1" /><br/>
+      <small>Exact Full Adder</small>
+    </td>
+  </tr>
+</table>
+
 - [Approximate Half Adder](https://github.com/BibhuAsish1925/Power-efficient-Approximate-Multiplier-via-Clock-gating/blob/main/Necessary%20Sub-Circuits/src/approximate_half_adder.v) and [Approximate Full Adder](https://github.com/BibhuAsish1925/Power-efficient-Approximate-Multiplier-via-Clock-gating/blob/main/Necessary%20Sub-Circuits/src/approximate_full_adder.v)
+
+<table>
+  <tr>
+    <td align="center">
+      <img width="808" height="369" alt="image" src="https://github.com/user-attachments/assets/25ae23b7-32cb-40dd-89f1-5de16297c249" /><br/>
+      <small>Approximate Half Adder</small>
+    </td>
+    <td align="center">
+      <img width="848" height="316" alt="image" src="https://github.com/user-attachments/assets/98f3487d-366d-47cc-97c2-795c903570b4" /><br/>
+      <small>Approximate Full Adder</small>
+    </td>
+  </tr>
+</table>
+
 - Parameterized implementations of:
   - [RCA](https://github.com/BibhuAsish1925/Power-efficient-Approximate-Multiplier-via-Clock-gating/blob/main/Necessary%20Sub-Circuits/src/param_rca.v)
   - [CSA](https://github.com/BibhuAsish1925/Power-efficient-Approximate-Multiplier-via-Clock-gating/blob/main/Necessary%20Sub-Circuits/src/param_csa.v)
   - [CSLA](https://github.com/BibhuAsish1925/Power-efficient-Approximate-Multiplier-via-Clock-gating/blob/main/Necessary%20Sub-Circuits/src/param_csla.v)
   - [COSA](https://github.com/BibhuAsish1925/Power-efficient-Approximate-Multiplier-via-Clock-gating/blob/main/Necessary%20Sub-Circuits/src/param_cosa.v)
+ 
+<table>
+  <tr>
+    <td align="center">
+      <img width="905" height="603" alt="image" src="https://github.com/user-attachments/assets/31971c81-ac25-4a7d-a9ef-486858371c72" /><br/>
+      <small>4-Bit ripple carry adder (RCA)</small>
+    </td>
+    <td align="center">
+      <img width="622" height="788" alt="image" src="https://github.com/user-attachments/assets/8ffa4bce-ad15-43cf-9378-06fcd629ddaa" /><br/>
+      <small>4-Bit carry save adder (CSA)</small>
+    </td>
+  </tr>
+</table>
+
+</table>
+  <tr>
+    <td align="center">
+      <img width="1680" height="853" alt="image" src="https://github.com/user-attachments/assets/a4750b9c-e239-4fe1-a065-741bec5d56e8" /><br/>
+      <small>4-Bit carry select adder (CSLA)</small>
+    </td>
+    <td align="center">
+      <img width="1421" height="849" alt="image" src="https://github.com/user-attachments/assets/f7708f36-df06-4498-8c7c-0960352ad0f2" /><br/>
+      <small>4-Bit conditional sum adder (COSA)</small>
+    </td>
+  </tr>
+</table>
+
 
 ### 2. Multiplier Variants
 
