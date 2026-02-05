@@ -8,8 +8,8 @@ module approximate_full_adder (
     output wire cout
 );
 
-assign sum  = a ^ b ^ cin;
-assign cout = a | b;      // simplified carry
+assign cout  = (a & b) | (b & cin) | (a & cin);
+assign sum = ~cout;      // simplified carry
 
 endmodule
 
