@@ -275,37 +275,9 @@ The complete design is implemented in **Verilog HDL**, organized for **clarity, 
 
 ### 2. Multiplier Variants
 
-###  2.a. [4-bit approximate multiplier](https://github.com/BibhuAsish1925/Power-efficient-Approximate-Multiplier-via-Clock-gating/blob/main/Multipliers/Approximate/src/approx_mult_8bit.v)
-
-<table>
-  <tr>
-    <td align="center">
-      <img width="715" height="746" alt="image" src="https://github.com/user-attachments/assets/bdc97698-582f-4944-98a1-ad240163665d" /><br/>
-      <small>4-bit approximate multiplier</small>
-    </td>
-  </tr>
-</table>
-
-### 2.b. [8-bit hierarchical approximate multiplier](https://github.com/BibhuAsish1925/Power-efficient-Approximate-Multiplier-via-Clock-gating/blob/main/Multipliers/Approximate/src/approx_mult_8bit.v)
-
-<table>
-  <tr>
-    <td align="center">
-      <img width="934" height="605" alt="image" src="https://github.com/user-attachments/assets/a840c395-9069-4dd8-8690-f56a968d458b" /><br/>
-      <small>8-bit hierarchical approximate multiplier</small>
-  </tr>
-</table>
-     
-### 2.c. [16-bit clock-gated approximate multiplier](https://github.com/BibhuAsish1925/Power-efficient-Approximate-Multiplier-via-Clock-gating/blob/main/Clock-gated%20Multipliers/Approximate/src/clock_gated_approx_mult_16bit.v)
-
-<table>
-  <tr>
-    <td align="center">
-      <img width="1696" height="748" alt="image" src="https://github.com/user-attachments/assets/de59b12f-8259-4406-96e2-327804d96cc0" /><br/>
-      <small>16-bit clock-gated approximate multiplier</small>
-    </td>
-  </tr>
-</table>
+a. [4-bit approximate multiplier](https://github.com/BibhuAsish1925/Power-efficient-Approximate-Multiplier-via-Clock-gating/blob/main/Multipliers/Approximate/src/approx_mult_8bit.v)
+b. [8-bit hierarchical approximate multiplier](https://github.com/BibhuAsish1925/Power-efficient-Approximate-Multiplier-via-Clock-gating/blob/main/Multipliers/Approximate/src/approx_mult_8bit.v)
+c. [16-bit clock-gated approximate multiplier](https://github.com/BibhuAsish1925/Power-efficient-Approximate-Multiplier-via-Clock-gating/blob/main/Clock-gated%20Multipliers/Approximate/src/clock_gated_approx_mult_16bit.v)
 
 <table>
   <tr>
