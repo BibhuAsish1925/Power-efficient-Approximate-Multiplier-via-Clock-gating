@@ -1,7 +1,7 @@
 `timescale 1ns / 1ps
 
 module param_half_adder #(
-    parameter APPROX = 0
+    parameter APPROX = 1     //0=exact, 1=full
 )(
     input  wire a,
     input  wire b,

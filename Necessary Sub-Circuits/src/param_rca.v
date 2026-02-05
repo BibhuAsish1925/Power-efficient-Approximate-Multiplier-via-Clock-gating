@@ -4,7 +4,7 @@
 
 module param_rca #(
     parameter WIDTH = 8,
-    parameter APPROX = 0
+    parameter APPROX = 1   //0=exact, 1=full
 )(
     input  wire [WIDTH-1:0] a,
     input  wire [WIDTH-1:0] b,
